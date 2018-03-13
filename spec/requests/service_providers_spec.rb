@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Users::ServiceProviders' do
-  describe 'approve on update' do
+  xdescribe 'approve on update' do
     it 'disallows app owner from approving the app' do
       app = create(:service_provider)
       login_as(app.user)
@@ -48,8 +48,8 @@ describe 'Users::ServiceProviders' do
     end
   end
 
-  describe 'notifications' do
-    xit 'sends email to admin requesting approval' do
+  xdescribe 'notifications' do
+    it 'sends email to admin requesting approval' do
       ClimateControl.modify ADMIN_EMAIL: 'identity-admin@example.com' do
         user = create(:user)
         deliveries.clear
