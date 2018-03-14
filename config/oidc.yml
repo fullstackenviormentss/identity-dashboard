@@ -7,4 +7,4 @@ development:
 
 production:
   <<: *default
-  idp_url: "<%= Figaro.env.idp_sp_url %>"
+  idp_url: "<%= Figaro.env.idp_url %>"
